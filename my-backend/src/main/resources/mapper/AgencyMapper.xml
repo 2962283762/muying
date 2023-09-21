@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.springbootinit.mapper.AgencyMapper">
+
+    <resultMap id="BaseResultMap" type="com.my.springbootinit.model.entity.Agency">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="agencyId" column="agencyId" jdbcType="CHAR"/>
+            <result property="owner" column="owner" jdbcType="VARCHAR"/>
+            <result property="agencyName" column="agencyName" jdbcType="VARCHAR"/>
+            <result property="agencyNumber" column="agencyNumber" jdbcType="CHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,agencyId,owner,
+        agencyName,agencyNumber,address,
+        createTime,updateTime
+    </sql>
+</mapper>

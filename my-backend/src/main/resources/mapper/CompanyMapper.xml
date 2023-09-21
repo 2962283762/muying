@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.springbootinit.mapper.CompanyMapper">
+
+    <resultMap id="BaseResultMap" type="com.my.springbootinit.model.entity.Company">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="companyId" column="companyId" jdbcType="CHAR"/>
+            <result property="companyName" column="companyName" jdbcType="VARCHAR"/>
+            <result property="companyType" column="companyType" jdbcType="VARCHAR"/>
+            <result property="registerTime" column="registerTime" jdbcType="TIMESTAMP"/>
+            <result property="businessRange" column="businessRange" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="uscc" column="uscc" jdbcType="VARCHAR"/>
+            <result property="legalEntity" column="legalEntity" jdbcType="VARCHAR"/>
+            <result property="legalEntityNum" column="legalEntityNum" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,companyId,companyName,
+        companyType,registerTime,businessRange,
+        address,uscc,legalEntity,
+        legalEntityNum
+    </sql>
+</mapper>
